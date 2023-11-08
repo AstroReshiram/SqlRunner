@@ -1,3 +1,0 @@
-
-INSERT INTO people (employee_id, name, age)
-VALUES (8, 'John', 25);
