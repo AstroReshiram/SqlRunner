@@ -5,10 +5,8 @@ import pandas as pd
 class DatabaseManager:
     """Class that manages database"""
 
-    def __init__(self, server, database):
-        self.server = server
-        self.database = database
-        self.engine = sa.create_engine('mssql+pyodbc://localhost/master?driver=ODBC+Driver+17+for+SQL+Server',
+    def __init__(self, connection_string):
+        self.engine = sa.create_engine(connection_string,
                                        connect_args={'timeout': 10})
 
         # using pyodbc mssql+pyodbc://localhost/master?driver=ODBC+Driver+17+for+SQL+Server&Encrypt=yes&TrustServerCertification=no&Authentication=ActiveDirectoryInteractive

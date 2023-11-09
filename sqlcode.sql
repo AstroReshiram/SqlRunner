@@ -14,6 +14,6 @@ BEGIN
 END
 
 INSERT INTO people (name, age, date_registered)
-VALUES ('Guy', 20, '2023-01-01');
+VALUES ('Mate', 20, '2023-01-01');
 
-SELECT * FROM people
+SELECT * FROM people ORDER BY name
